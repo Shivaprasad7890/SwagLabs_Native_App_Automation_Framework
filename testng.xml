@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="iOS Mobile app tests" parallel="none" thread-count="5">
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+    <test name="Test name: SwagLabs Automation">
+        <parameter name="platformName" value="iOS"/>
+        <parameter name="os" value="Mac OS"/>
+        <classes>
+            <class name="tests.FirstAssignmentTest"/>
+        </classes>
+    </test>
+
+</suite>
