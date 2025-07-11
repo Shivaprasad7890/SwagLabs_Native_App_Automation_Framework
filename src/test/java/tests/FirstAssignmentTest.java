@@ -13,6 +13,7 @@ import pages.LoginPage;
 import pages.ProductsMainPage;
 import pages.TShirtDetailsPage;
 import utilities.ExtentReportManager;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Set;
@@ -35,7 +36,7 @@ public class FirstAssignmentTest extends BaseClass {
         // Switch to native context
         Set<String> contexts = getDriver().getContextHandles();
         for (String context : contexts) {
-            log().info("context is: "+context);
+            log().info("context is: " + context);
         }
         driver.get().context("NATIVE_APP"); // Switch to native context
 
@@ -122,9 +123,8 @@ public class FirstAssignmentTest extends BaseClass {
         Assert.assertTrue(productsMainPage.isProductsHeaderVisible(), "Products header is not visible");
 
         // Performing 1 swipe up action
-        Dimension screenSize = getDriver().manage().window().getSize();
-        int width = screenSize.getWidth();
-        int height = screenSize.getHeight();
+        int width = getWidthOfTheDevice();
+        int height = getHeightOfTheDevice();
 
         // 1st) top left corner
         int topX = (int) (width * 0.50);
@@ -146,7 +146,7 @@ public class FirstAssignmentTest extends BaseClass {
         log().info("Number of products added is :" + numberOfProductAdded);
     }
 
-    //Test case 3: Proceed to ‘Sauce Labs Bolt T-Shirt’ detail page & validate if user can zoom-in & zoom-out the image
+    // Test case 3: Proceed to ‘Sauce Labs Bolt T-Shirt’ detail page & validate if user can zoom-in & zoom-out the image
     @Test(dataProvider = "loginData")
     public void verifyZoomInAndZoomOut(String username, String password) {
         LoginPage loginPage = new LoginPage();
@@ -157,9 +157,9 @@ public class FirstAssignmentTest extends BaseClass {
         Assert.assertTrue(productsMainPage.isProductsHeaderVisible(), "Products header is not visible");
 
         // Performing 1 swipe up action
-        Dimension screenSize = getDriver().manage().window().getSize();
-        int width = screenSize.getWidth();
-        int height = screenSize.getHeight();
+        int width = getWidthOfTheDevice();
+        int height = getHeightOfTheDevice();
+
         // 1st) top left corner
         int topX = (int) (width * 0.50);
         int topY = (int) (height * 0.30);

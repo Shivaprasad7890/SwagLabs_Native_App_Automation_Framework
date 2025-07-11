@@ -54,10 +54,4 @@ public class DrawingPage extends BaseClass {
     public void tapOnSaveButton(){
         clickOnElement(saveButton);
     }
-
-
-
-
-
-
 }

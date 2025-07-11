@@ -9,6 +9,7 @@ import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -216,6 +217,14 @@ public class BaseClass {
         //getDriver().perform(Arrays.asList(dragAndDrop));
         getDriver().perform(List.of(dragAndDrop));
         log().info("Performed Drag and Drop operation");
+    }
+
+    public int getHeightOfTheDevice(){
+        return getDriver().manage().window().getSize().getHeight();
+    }
+
+    public int getWidthOfTheDevice(){
+        return getDriver().manage().window().getSize().getWidth();
     }
 
 }
