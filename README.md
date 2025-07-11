@@ -1,6 +1,5 @@
 # SwagLabs Native mobile app automation (iOS)
-=============================================
-
+====================================================================
 
 Tools and Technologies used
 ===========================
@@ -22,7 +21,7 @@ Framework features
 
 
 # Important notes:
-==================
+
 - Make sure that Appium server is up and running in the terminal before running the scripts
 - Starting and Stopping the Appium Server programmatically will be added in future
 
